@@ -63,11 +63,10 @@
           <li>✓ Priority support</li>
           <li>✓ Early access to new features</li>
         </ul>
-        <!-- Paddle checkout button will be added here after approval -->
         <button id="paddle-checkout" class="btn-primary" style="width: 100%;">
           Upgrade to Pro — $6/month
         </button>
-        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 12px;">
+        <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 12px; text-align: center;">
           Secure payment via Paddle. Cancel anytime.
         </p>
       </div>
@@ -131,18 +130,24 @@
     <p>© 2026 SnapSum. All rights reserved.</p>
   </footer>
 
-  <!-- Paddle SDK (uncomment after approval) -->
-  <!-- <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <!-- Paddle SDK -->
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script>
-    Paddle.Environment.set('sandbox'); // Remove for production
-    Paddle.Setup({ seller: YOUR_SELLER_ID });
-    
+    // Initialize Paddle.js with client-side token (live environment)
+    Paddle.Initialize({
+      token: 'live_2ae1fe7817b9b1d4c2f967280ba'
+    });
+
+    // Handle checkout button click
     document.getElementById('paddle-checkout').addEventListener('click', function() {
       Paddle.Checkout.open({
-        transactionId: 'YOUR_TRANSACTION_ID'
+        items: [{
+          priceId: 'pri_01kpqkrvqm38d8ck4ty7d35a0w',
+          quantity: 1
+        }]
       });
     });
-  </script> -->
+  </script>
 
   <script src="script.js"></script>
 </body>

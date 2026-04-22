@@ -20,11 +20,25 @@
   <nav>
     <a href="/" class="nav-logo">Snap<span>Sum</span></a>
     <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#how">How it works</a>
-      <a href="#languages">Languages</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/download.html" class="btn-nav">Download</a>
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#languages" data-i18n="nav.languages">Languages</a>
+      <a href="/pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="/download.html" class="btn-nav" data-i18n="nav.download">Download</a>
+      <select id="lang-select" class="lang-select" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="zh-CN">中文</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский</option>
+        <option value="ar">العربية</option>
+        <option value="hi">हिन्दी</option>
+      </select>
     </div>
     <button class="nav-menu" onclick="toggleMenu()">☰</button>
   </nav>
@@ -33,10 +47,10 @@
   <section class="hero">
     <div class="hero-badge">
       <span class="badge-dot"></span>
-      Now available for Chrome, Edge & Desktop
+      <span data-i18n="hero.badge">Now available for Chrome, Edge & Desktop</span>
     </div>
-    <h1>Screen Recording<br><span class="gradient">with AI Subtitles</span></h1>
-    <p class="hero-sub">Record your screen. Get automatic captions. Translate to 12 languages. Burn subtitles into video. All in one click.</p>
+    <h1><span data-i18n="hero.title1">Screen Recording</span><br><span class="gradient" data-i18n="hero.title2">with AI Subtitles</span></h1>
+    <p class="hero-sub" data-i18n="hero.subtitle">Record your screen. Get automatic captions. Translate to 12 languages. Burn subtitles into video. All in one click.</p>
     <div class="hero-actions">
       <a href="/download.html" class="btn-primary">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -44,14 +58,14 @@
           <polyline points="7 10 12 15 17 10"/>
           <line x1="12" y1="15" x2="12" y2="3"/>
         </svg>
-        Download Free
+        <span data-i18n="hero.download">Download Free</span>
       </a>
-      <a href="#how" class="btn-secondary">See how it works →</a>
+      <a href="#how" class="btn-secondary"><span data-i18n="hero.seeHow">See how it works →</span></a>
     </div>
     <div class="hero-stats">
-      <div><strong>12</strong> Languages</div>
-      <div><strong>AI</strong> Powered</div>
-      <div><strong>Free</strong> 3 recordings/month</div>
+      <div><strong>12</strong> <span data-i18n="hero.languages">Languages</span></div>
+      <div><strong>AI</strong> <span data-i18n="hero.powered">Powered</span></div>
+      <div><strong><span data-i18n="hero.free">Free</span></strong> <span data-i18n="hero.freeDesc">3 recordings/month</span></div>
     </div>
   </section>
 
